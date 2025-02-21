@@ -1369,6 +1369,24 @@ server {
                 proxy_set_header Connection 'upgrade';
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
+        }
+
+        location /generate-presigned-url-seo {
+                proxy_pass http://localhost:9000/generate-presigned-url-seo;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /dagRunSeo {
+                proxy_pass http://localhost:9000/dagRunSeo;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
         }   
               
 
