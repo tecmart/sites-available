@@ -1388,6 +1388,123 @@ server {
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
         }   
+
+        location /generate-presigned-url-content {
+                proxy_pass http://localhost:9000/generate-presigned-url-content;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /generate-presigned-url-metrics {
+                proxy_pass http://localhost:9000/generate-presigned-url-metrics;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /dagRunPerformanceHydration {
+                proxy_pass http://localhost:9000/dagRunPerformanceHydration;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /checkDagStatusPerformanceHydration {
+                proxy_pass http://localhost:9000/checkDagStatusPerformanceHydration;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /generate-presigned-url-linkedin-ads {
+                proxy_pass http://localhost:9000/generate-presigned-url-linkedin-ads;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /dagRunLinkedinAds {
+                proxy_pass http://localhost:9000/dagRunLinkedinAds;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /checkDagStatusLinkedinAds {
+                proxy_pass http://localhost:9000/checkDagStatusLinkedinAds;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /generate-presigned-url-meta-ads {
+                proxy_pass http://localhost:9000/generate-presigned-url-meta-ads;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /dagRunMetaAds {
+                proxy_pass http://localhost:9000/dagRunMetaAds;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /checkDagStatusMetaAds {
+                proxy_pass http://localhost:9000/checkDagStatusMetaAds;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }    
+
+        location /generate-presigned-url-tiktok-ads {
+                proxy_pass http://localhost:9000/generate-presigned-url-tiktok-ads;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /dagRunTikTokAds {
+                proxy_pass http://localhost:9000/dagRunTikTokAds;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }   
+
+        location /checkDagStatusTikTokAds {
+                proxy_pass http://localhost:9000/checkDagStatusTikTokAds;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }
               
 
 	# deny access to .htaccess files, if Apache's document root
