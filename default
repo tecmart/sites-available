@@ -352,6 +352,17 @@ server {
                 proxy_cache_bypass $http_upgrade;
 }
 
+	location /api/google-ads/runs {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/google-ads/runs;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
 	location /api/google-ads/process-dataset {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
