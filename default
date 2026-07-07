@@ -352,6 +352,160 @@ server {
                 proxy_cache_bypass $http_upgrade;
 }
 
+	location /api/evolution/config {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/config;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/instances {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/instances;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/create-instance {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/create-instance;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/connection-state {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/connection-state;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/connect {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/connect;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/groups {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/groups;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/group {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/group;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/send-text {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/send-text;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/evolution/send-twitter-alert {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/evolution/send-twitter-alert;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/twitter-alerts/clients {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/twitter-alerts/clients;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/twitter-alerts/categories {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/twitter-alerts/categories;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/twitter-alerts/keywords {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/twitter-alerts/keywords;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/twitter-alerts/mentions {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/twitter-alerts/mentions;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
+	location /api/twitter-alerts/run-once {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/twitter-alerts/run-once;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
 	location /api/whatsapp/webhook {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
