@@ -517,6 +517,17 @@ server {
                 proxy_cache_bypass $http_upgrade;
 }
 
+	location /api/benchmark-social-network/upload-image-from-url {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		proxy_pass http://localhost:9000/api/benchmark-social-network/upload-image-from-url;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+}
+
 	location /api/whatsapp/webhook {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
