@@ -685,7 +685,7 @@ server {
 	location /embeddetail/get/creative-pieces/upload-from-url{
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
-		proxy_pass http://localhost:9000/embeddetail/embeddetail/get/creative-pieces/upload-from-url;
+		proxy_pass http://localhost:9000/embeddetail/get/creative-pieces/upload-from-url;
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection 'upgrade';
@@ -703,17 +703,6 @@ server {
                 proxy_set_header Host $host;
                 proxy_cache_bypass $http_upgrade;
 }
-
-	location /embeddetail/get/creative-pieces/delete{
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		proxy_pass http://localhost:9000/embeddetail/get/creative-pieces/delete;
-                proxy_http_version 1.1;
-                proxy_set_header Upgrade $http_upgrade;
-                proxy_set_header Connection 'upgrade';
-                proxy_set_header Host $host;
-                proxy_cache_bypass $http_upgrade;
-}   
 
 	location /dashboards {
 		proxy_pass http://localhost:9000/getdashboards;
